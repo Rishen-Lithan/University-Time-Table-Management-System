@@ -1,0 +1,50 @@
+config:
+  target: "http://localhost:3500"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+
+scenarios:
+  - flow:
+      - get:
+          url: "/logout"
+      - post:
+          url: "/register"
+      - post:
+          url: "/login"
+      - get:
+          url: "/refresh"
+      - post:
+          url: "/course"
+      - get:
+          url: "/course"
+      - put:
+          url: "/course"
+      - delete:
+          url: "/course"
+      - post:
+          url: "/assign"
+      - post:
+          url: "/schedule"
+      - put:
+          url: "/schedule"
+      - put:
+          url: "/session"
+      - post:
+          url: "/session"
+      - delete:
+          url: "/session"
+      - post:
+          url: "/book"
+      - post:
+          url: "/enroll"
+      - get:
+          url: "/enroll"
+      - put:
+          url: "/enroll"
+      - delete:
+          url: "/enroll"
+      - post:
+          url: "/announce"
+      - get:
+          url: "/announce"
